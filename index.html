@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>jQuery Functions</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+		.color {
+			color: blue;
+		}
+		</style>
+	<script type="text/javascript" src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$('.focus').focus();
+			$('.addclass').click(function(){
+				$('#add_class').addClass("color");
+			});
+			$('#after').click(function(){
+				alert("Don't Click that");
+			});
+			$('#click').click(function(){
+				alert('You Clicked!');
+			});
+			$('#show_tell').hide();
+
+			$('#hide').click(function(){
+				$('#show_tell').hide();
+			});
+			$('#show').click(function(){
+				$('#show_tell').show();
+			});
+			$('.append').click(function(){
+				$('.result').append('You added more text');
+			});
+			$('.up').click(function(){
+				$('#heart').slideUp();
+			});
+			$('.down').click(function(){
+				$('#heart').slideDown();
+			});
+			$('.slide_toggle').click(function(){
+				$('#unicorn').slideToggle();
+			});
+			$('#sunset').hide();
+
+			$('.in').click(function(){
+				$('#sunset').fadeIn();
+			});
+			$('.out').click(function(){
+				$('#sunset').fadeOut();
+			});
+			$('.toggle').click(function(){
+				$('#bacon').toggle();
+			});
+			$('.attr').click(function(){
+				$('#cookie').attr('style', 'width:100px; height:100px;')
+			})
+			$('.text').click(function(){
+				$('#cupcake').text("Funfetti");
+			});
+			$('.html').click(function(){
+				$('#bold').html("<b>Make me bold</b></span>");
+			});
+			$('.before').click(function(){
+				$('#before_after').before("Milk");
+			});
+			$('.after').click(function(){
+				$('#before_after').after("Cookies");
+			});
+			$('.value').click(function(){
+			//	$('#morevalue').text($('#name').val());
+			var value = $('#name').val();
+				$('#morevalue').text(value);
+			});
+		})
+</script>
+</head>
+
+<body>
+	<h1 style='color:green'>My jQuery Assignment 1</h1>
+	<div id='container'>
+		<div class='box'>
+			<h3>Focus</h3>
+			<button class='focus'>Click Me</button>
+		</div>
+		<div class='box'>
+			<h3>Add Class</h3>
+			<button class='addclass'>Add Class</button>
+			<p id='add_class'>Make me blue</p>
+		</div>
+		<div class='box'>
+			<h3>Click</h3>
+			<button id='click'>Click Here!</button>
+		</div>
+		<div class='box'>
+			<h3>Show and Hide</h3>
+			<button id='show'>Show Text</button>
+			<button id='hide'>Hide Text</button>
+			<p id='show_tell'>Here's the text!</p>
+		</div>
+		<div class='box'>
+			<h3>Append</h3>
+			<button class='append'>Click to append below</button>
+			<p>Add more text...</p>
+			<div class='result'></div>
+		</div>
+		<div class='box'>
+			<h3>Slide Up and down</h3>
+			<img id='heart' src="https://weheart.github.io/downloads/HEART_COLOR_TWITTER_5.png" alt='heart' style='width:300px; height:300px;'>
+			<button class='down'>Click to slide down</button>
+			<button class='up'>Click to slide up</button>
+		</div>
+		<div class='box'>
+			<h3>Slide Toggle</h3>
+			<img id='unicorn' src="http://images.clipartpanda.com/cute-unicorn-clipart-unicorn4.png" alt='unicorn' style='width:350px; height:255px;'>
+			<button class='slide_toggle'>Slide Toggle</button>
+		</div>
+		<div class='box'>
+			<h3>Fade In and Out</h3>
+			<img id='sunset' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZv-V9Ej5z1NBcPbtyW7c7BALGd5eiEKtGITY5Al9OHaRnhTXLIQ" alt='sunset' style='width:300px; height:300px;'>
+			<button class='in'>Fade In</button>
+			<button class='out'>Fade Out</button>
+		</div>
+		<div class='box'>
+			<h3>Toggle</h3>
+			<img id='bacon' src="http://www.notmartha.org/images/other/2008feb/baconsinglecurl.jpg" alt='bacon'>
+			<button class='toggle'>Toggle</button>
+		</div>
+		<div class='box'>
+			<h3>Attr</h3>
+			<img id='cookie' src="http://www.high-beeches.com/Images/cookie-policy.jpg" alt='cookie' style='width:300px; height:300px;' >
+			<button class='attr'>Click Me!</button>
+		</div>
+		<div class='box'>
+			<h3>Text</h3>
+			<button class='text'>Click Here</button>
+			<p id='cupcake'>for the cupcake I love</p>
+		</div>
+		<div class='box'>
+			<h3>HTML</h3>
+			<button class='html'>Click Me</button>
+			<span id='bold'>Make me bold</span>
+		</div>
+		<div class='box'>
+			<h3>Before and After</h3>
+			<p id='before_after'>and</p>
+			<button class='before'>Before</button>
+			<button class='after'>After</button>
+		</div>
+		<div class='box'>
+			<h3>Val</h3>
+			<input id='name' type='text' name='name' placeholder='first name'>
+			<button class='value'>Click me</button>
+			<p id='morevalue'>My name is:</p>
+		</div>
+	</div>
+</body>
+</html>
